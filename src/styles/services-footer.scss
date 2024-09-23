@@ -1,0 +1,22 @@
+.services-footer {
+  border-top: #d9fff5 solid 1px;
+  .copyright {
+    color: #7e7e82;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768.99px) {
+  .services-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 24px;
+    .copyright:nth-child(1) {
+      text-align: left;
+    }
+    .copyright:nth-child(3) {
+      text-align: right;
+    }
+  }
+}

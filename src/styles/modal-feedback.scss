@@ -1,0 +1,173 @@
+.modal-feedback {
+  top: 0;
+  z-index: 400;
+  padding-top: 40px;
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  padding-top: 0;
+  position: fixed;
+
+  .modal-title {
+    font-family: "TT Lakes Bold";
+    font-size: 28px;
+    margin: 0;
+    background: url("../icons/whaaaaa.svg") no-repeat left;
+    padding-left: 16px;
+  }
+
+  .input-list {
+    padding-top: 20px;
+    padding-left: 16px;
+    .modal-feedback__input {
+      width: 80%;
+      display: block;
+      border: 1px solid rgb(234, 234, 234);
+      border-radius: 8px;
+      padding: 16px 16px 16px 6px;
+      margin-bottom: 16px;
+      display: inline-block;
+      margin-left: 7%;
+    }
+    .modal-feedback__input:nth-child(4) {
+      height: 100px;
+      margin-bottom: 0;
+    }
+
+    .modal-feedback__input:focus {
+      outline: 1.3px solid aqua;
+    }
+  }
+  .modal-title {
+    font-family: "TT Lakes Bold";
+    font-size: 28px;
+    margin: 0;
+    margin-left: 12px;
+    background-image: url("../icons/highlight.svg") no-repeat left;
+    margin-left: 0;
+  }
+  .disclaimer {
+    margin-left: 7%;
+    width: 88%;
+    font-size: 14px;
+    a {
+      text-decoration: none; 
+      color: #ff3e79;
+      &:focus {
+        outline: 1.3px solid aqua;
+      }
+    }
+  }
+  .submit-button {
+    position: absolute;
+    border: none;
+    background: url("../icons/send.svg") no-repeat 100% 100%;
+    width: 136px;
+    height: 32px;
+    right: 0;
+    margin-right: 32px;
+    &:focus {
+      outline: 1.3px solid aqua;
+    }
+  }
+}
+
+@media (max-width: 1439.99px) {
+  .modal-feedback {
+    .burger-close {
+      margin: 0;
+      margin-bottom: 40px;
+      margin-left: 16px;
+      margin-top: 24px;
+    }
+    .input-list {
+      .modal-feedback__input {
+      }
+    }
+  }
+}
+.modal_popup {
+  animation-name: modal_popup;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+.modal_popout {
+  animation-name: modal_popout;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes modal_popup {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes modal_popout {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+    box-shadow: none;
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal-feedback {
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 28%;
+    box-shadow: #b1b1b6 40px 0px 100px 100px;
+    .burger-close {
+      position: absolute;
+      left: -80px;
+      top: 0px;
+    }
+  }
+}
+
+.modal--pop-up {
+  animation-name: slideinright;
+  animation-duration: 0.28s;
+  animation-fill-mode: forwards;
+  height: 110vh;
+}
+
+.modal--pop-out {
+  animation-name: slideoutright;
+  animation-duration: 0.28s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideinright {
+  from {
+    transform: translateX(200%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideoutright {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(200%);
+    box-shadow: none;
+    display: none;
+  }
+}

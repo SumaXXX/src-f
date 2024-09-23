@@ -1,0 +1,84 @@
+.swiper-repair {
+  .visibale {
+    display: block !important;
+  }
+
+  .swiper-wrapper {
+    overflow-y: visible;
+  }
+
+  .swiper {
+    max-height: 290px;
+    padding-bottom: 42px;
+  }
+
+  .swiper-slide {
+    padding-top: 100px;
+    padding-bottom: 55px;
+    overflow-y: visible;
+    height: auto;
+
+    .swiper-slide__button {
+      height: 160px;
+      overflow-y: visible;
+      padding: 10px;
+      .swiper-repair__repair-practice {
+        font-family: "TT Lakes Demi";
+        align-self: baseline;
+      }
+      .swiper-slide__button-icon {
+        align-self: last baseline;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 15px;
+  }
+}
+
+@media (min-width: 767.99px) {
+  .swiper-repair {
+    .swiper-slide {
+      padding: 0;
+      padding-bottom: 20px;
+    }
+
+    .swiper-slide:nth-child(n + 4) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1027.99px){
+  .swiper-repair {
+    .swiper-slide:nth-child(n + 4) {
+      display: block;
+    }
+    .swiper-slide:nth-child(n + 5) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1280.99px) and (max-width: 1440px){
+  .swiper-repair {
+    .swiper-slide:nth-child(n + 5) {
+      display: block;
+    }
+    .swiper-slide:nth-child(n + 6) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1600.99px) {
+  .swiper-repair {
+    .swiper-slide:nth-child(n + 5) {
+      display: block;
+    }
+    .swiper-slide:nth-child(n + 6) {
+      display: none;
+    }
+  }
+}
